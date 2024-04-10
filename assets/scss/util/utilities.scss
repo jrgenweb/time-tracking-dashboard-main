@@ -1,0 +1,12 @@
+.flex-column {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+.p-2 {
+    padding: 2rem;
+}

@@ -1,0 +1,154 @@
+@use "../globals/typography.scss" as *;
+@use "../globals/variables.scss" as *;
+@use "../util/mixins.scss" as *;
+
+.dashboard__header {
+    background-color: var(--clr-neutral-dark-blue);
+    border-radius: $br-radius;
+    .dashboard__profile {
+        border-radius: $br-radius;
+        background-color: var(--clr-primary-blue);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+
+        text-align: left;
+
+        @include respond("large") {
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        img {
+            max-width: 64px;
+
+            border-radius: 50%;
+            border: 3px solid var(--clr-white);
+        }
+        p {
+        }
+        h1 {
+        }
+    }
+    .dashboard__nav {
+        padding: 2rem;
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            padding-inline-start: 0;
+
+            @include respond("large") {
+                flex-direction: column;
+            }
+
+            li {
+                a {
+                }
+            }
+        }
+    }
+}
+
+.card {
+    padding: 1.5rem;
+    background-color: var(--clr-neutral-dark-blue);
+    border-radius: $br-radius;
+
+    position: relative;
+    .card__body {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        .card__title {
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        .card__time {
+            grid-row: 2/3;
+            grid-column: 1/2;
+            font-size: 2rem;
+            color: var(--clr-white);
+        }
+        .card__link {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            text-align: right;
+        }
+        .card__last {
+            grid-row: 2/3;
+            grid-column: 2/3;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+}
+
+%colored_card {
+    margin-top: 2.25rem;
+    &::before {
+        content: "";
+        background-position: right 10px top -10px;
+        background-repeat: no-repeat;
+        left: 0;
+        top: -36px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        border-radius: $br-radius;
+    }
+}
+
+.card[data-title="Work"] {
+    @extend %colored_card;
+    &::before {
+        background-image: url("../../assets/images/icon-work.svg");
+        background-color: var(--clr-primary-light-red-work);
+    }
+}
+
+.card[data-title="Play"] {
+    @extend %colored_card;
+    &::before {
+        background-image: url("../../assets/images/icon-play.svg");
+        background-color: var(--clr-primary-soft-blue-play);
+    }
+}
+.card[data-title="Study"] {
+    @extend %colored_card;
+    &::before {
+        background-image: url("../../assets/images/icon-study.svg");
+        background-color: var(--clr-primary-light-red-study);
+    }
+}
+
+.card[data-title="Exercise"] {
+    @extend %colored_card;
+    &::before {
+        background-image: url("../../assets/images/icon-exercise.svg");
+        background-color: var(--clr-primary-lime-green-exercise);
+    }
+}
+
+.card[data-title="Social"] {
+    @extend %colored_card;
+    &::before {
+        background-image: url("../../assets/images/icon-social.svg");
+        background-color: var(--clr-primary-violet-social);
+    }
+}
+
+.card[data-title="Self Care"] {
+    @extend %colored_card;
+    &::before {
+        background-image: url("../../assets/images/icon-self-care.svg");
+        background-color: var(--clr-primary-soft-orange-self-care);
+    }
+}

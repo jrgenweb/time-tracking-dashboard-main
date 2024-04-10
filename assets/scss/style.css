@@ -1,0 +1,58 @@
+/**
+
+    Google Fonts
+    Lato, Roboto, Poppins, Madimi One, Montserrat, Angkor, Oswald
+
+
+**/
+@import url("https://fonts.googleapis.com/css2?family=Angkor&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  /* 
+  ## Colors
+
+  ### Primary */
+  --clr-primary-blue: hsl(246, 80%, 60%);
+  --clr-primary-light-red-work: hsl(15, 100%, 70%);
+  --clr-primary-soft-blue-play: hsl(195, 74%, 62%);
+  --clr-primary-light-red-study: hsl(348, 100%, 68%);
+  --clr-primary-lime-green-exercise: hsl(145, 58%, 55%);
+  --clr-primary-violet-social: hsl(264, 64%, 52%);
+  --clr-primary-soft-orange-self-care: hsl(43, 84%, 65%);
+  /* ### Neutral */
+  --clr-neutral-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-neutral-dark-blue: hsl(235, 46%, 20%);
+  --clr-neutral-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-neutral-pale-blue: hsl(236, 100%, 87%);
+}
+
+body {
+  font-size: 1.125rem;
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.p-2 {
+  padding: 2rem;
+}/*# sourceMappingURL=style.css.map */

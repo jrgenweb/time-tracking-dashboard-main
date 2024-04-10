@@ -1,0 +1,41 @@
+@use "../globals/variables.scss" as *;
+@use "../util/mixins.scss" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+body {
+    font-size: 1.125rem;
+    font-family: "Rubik", sans-serif;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 300;
+}
+h2 {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+p {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    color: var(--clr-neutral-pale-blue);
+}
+
+a {
+    color: var(--clr-neutral-desaturated-blue);
+    text-decoration: none;
+    font-size: 1.125rem;
+
+    &:hover,
+    &.active {
+        color: var(--clr-white);
+    }
+}
+
+h2,
+p {
+    padding: 0;
+    margin: 0;
+}

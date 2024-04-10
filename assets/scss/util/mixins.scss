@@ -1,0 +1,19 @@
+@use "../util/breakpoints.scss" as *;
+@mixin respond($breakpoint) {
+    @if ($breakpoint == small) {
+        @media (min-width: $br-small) {
+            @content;
+        }
+    }
+    @if ($breakpoint == medium) {
+        @media (min-width: $br-medium) {
+            @content;
+        }
+    }
+
+    @if ($breakpoint == large) {
+        @media (min-width: $br-large) {
+            @content;
+        }
+    }
+}
