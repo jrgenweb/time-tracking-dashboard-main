@@ -49,7 +49,7 @@ function createCardEl(selected, data) {
     const cardLinkEl = document.createElement('a');
     cardLinkEl.classList.add('card__link');
     cardLinkEl.setAttribute('href', '#');
-    cardLinkEl.innerHTML = '<img src="\/assets/images/icon-ellipsis.svg\">';
+    cardLinkEl.innerHTML = '<img src="\/../dist/images/icon-ellipsis.svg\">';
 
     const cardLastEl = document.createElement('p');
     cardLastEl.classList.add('card__last');
