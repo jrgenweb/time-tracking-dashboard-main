@@ -1,6 +1,6 @@
 let timeData = [];
 
-const dashBoardBodyEl = document.querySelector('.dashboard__body');
+const dashBoard = document.querySelector('.dashboard');
 
 const selectorLinks = document.querySelectorAll('.selector_link');
 let selectedLink = 'weekly'
@@ -44,7 +44,7 @@ function createCardEl(selected, data) {
 
     const cardTimeEl = document.createElement('p');
     cardTimeEl.classList.add('card__time');
-    cardTimeEl.innerText = data["timeframes"][selected]["current"];
+    cardTimeEl.innerText = data["timeframes"][selected]["current"] + 'hrs';
 
     const cardLinkEl = document.createElement('a');
     cardLinkEl.classList.add('card__link');
@@ -80,9 +80,13 @@ function changeSelection(event) {
 }
 
 function renderDashboard() {
-    dashBoardBodyEl.innerHTML = "";
+
+
+    //remove all previous card element
+    const cardsEl = document.querySelectorAll('.dashboard .card');
+    cardsEl.forEach(element => element.remove());
     timeData.forEach(element => {
-        dashBoardBodyEl.appendChild(createCardEl(selectedLink, element));
+        dashBoard.appendChild(createCardEl(selectedLink, element));
     });
 }
 
