@@ -14,7 +14,7 @@ selectorLinks.forEach(link => {
 
 async function fetchProducts() {
     try {
-        const response = await fetch("data.json");
+        const response = await fetch("https://jrgenweb.github.io/time-tracking-dashboard-main/data.json");
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
         }
